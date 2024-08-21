@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFC Anvil Calculator</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+    <div class="container mt-4 mb-4">
+        <h1>
+            TFC Anvil Calculator
+            <a href="" style="font-size:1rem;" data-bs-toggle="modal" data-bs-target="#howtoModal">How to?</a>
+        </h1>
+
+        <div class="modal fade" id="howtoModal" tabindex="-1" aria-labelledby="howToModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-2" id="howToModal">How to</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info">
+                            Anything on this site with a <span title="Yes, just like that">
+                                <b class="info">?</b>
+                            </span> can be hovered over (tapped on mobile) for a toolip.
+                        </div>
+                        <div class="accordion" id="accordionModal">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#modal-collapseOne" aria-expanded="false"
+                                        aria-controls="modal-collapseOne">
+                                        Easy Usage
+                                    </button>
+                                </h2>
+                                <div id="modal-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionModal">
+                                    <div class="accordion-body">
+                                        <p>Download and apply the following resource pack
+                                        </p>
+                                        <p><a target="_blank"
+                                                href="https://www.curseforge.com/minecraft/texture-packs/tfc-anvil-helper">https://www.curseforge.com/minecraft/texture-packs/tfc-anvil-helper</a>
+                                        </p>
+                                        <p>When forging a part, the red arrow position will be the <code>Target
+                                                Value</code> (each
+                                            'tick' is a pixel). The resource pack is only used to count the position of
+                                            the red arrow.</p>
+                                        <p>Next, set the last actions in the same order you see them in the anvil using
+                                            the <code>Add Last Actions</code> section.
+                                        </p>
+                                        <div class="alert alert-info">
+                                            For cases where any type of hit can be used, <code>Hit</code> will consider
+                                            any action that has the word <code>Hit</code>
+                                            in it.
+                                        </div>
+                                        <p>Click <code>Calculate</code> and it should output the steps that you have
+                                            to take to
+                                            perfectly anvil your part.</p>
+                                        <div class="alert alert-warning">
+                                            Take caution as it is technically possible that the actual steps to reach
+                                            the target needs to be in a different order to stay within bounds of the
+                                            anvil. This is currently not checked for.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#modal-collapseTwo" aria-expanded="false"
+                                        aria-controls="modal-collapseTwo">
+                                        No Resource Pack Usage
+                                    </button>
+                                </h2>
+                                <div id="modal-collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionModal">
+                                    <div class="accordion-body">
+                                        <p>Using this calculator without the associated resource pack (As described in
+                                            the Easy Usage section) requires sacrificing resources (if the resource
+                                            cannot be re-smelted to remove the 'Worked' tag) or at the cost of making an
+                                            imperfect part.
+                                        </p>
+                                        <p>Taking that sacrificial part to be forged, hammer it until you line up the
+                                            red and green arrows. However, take note of what steps you take to get
+                                            there. You can keep track of this using the <code>Add Last Actions</code>
+                                            buttons. Once you do this, click on <code>Use total as target</code> to use
+                                            the total shown as the target.</p>
+                                        <div class="alert alert-warning">
+                                            Do not use the <code>Hit</code> button when doing this part, as that action
+                                            is not directly possible in terms of targeting. If you accidentally use it,
+                                            it will not count towards the total.
+                                        </div>
+                                        <p>Continuing with the typical steps, after making sure to
+                                            <code>Clear Last Actions</code> first.
+                                        </p>
+                                        <p>Set the last actions in the same order you see them in the anvil using
+                                            the <code>Add Last Actions</code> section.
+                                        </p>
+                                        <div class="alert alert-info">
+                                            For cases where any type of hit can be used, <code>Hit</code> will consider
+                                            any action that has the word <code>Hit</code>
+                                            in it.
+                                        </div>
+                                        <p>Click <code>Calculate</code> and it should output the steps that you have
+                                            to take to
+                                            perfectly anvil your part.</p>
+                                        <div class="alert alert-warning">
+                                            Take caution as it is technically possible that the actual steps to reach
+                                            the target needs to be in a different order to stay within bounds of the
+                                            anvil. This is currently not checked for.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#modal-collapseThree" aria-expanded="false"
+                                        aria-controls="modal-collapseThree">
+                                        Modifying Actions
+                                    </button>
+                                </h2>
+                                <div id="modal-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionModal">
+                                    <div class="accordion-body">
+                                        <p>Actions in the anvil is what you do to items to forge some part. Default
+                                            actions are known and typically are not different between versions of TFC.
+                                        </p>
+                                        <p>If, for whatever reason, you wish to modify the values these actions have, or
+                                            change them outright, this can be done under the <code>Actions</code>
+                                            section.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a target="_blank"
+                            href="https://github.com/lehuman/tfcanvil">https://github.com/lehuman/tfcanvil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" title="The actions that can be taken in an anvil.
+The default actions are set, but can be
+modified or added to, if needed.">
+                        Actions
+                        <b class="info" style="padding-left: 4px;">?</b>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#headingOne">
+                    <div class="accordion-body">
+                        <div class="bs-component">
+                            <select name="actions" id="actions_select" size="8" class="form-select">
+                            </select>
+                        </div>
+                        <p class="mt-2">
+                            <button id="actions_btn_new" class="btn btn-success">New Action</button>
+                            <button id="actions_btn_del" disabled class="btn btn-danger">Delete Selected</button>
+                        </p>
+                        <div class="form-label mt-4">
+                            <span>Selected:</span>
+                            <strong><span id="actions_text_selected">None</span></strong>
+                            <div>
+                                <div class="form-label mt-2">Name</div>
+                                <input disabled type="text" class="form-control" id="actions_input_name"
+                                    placeholder="None">
+                            </div>
+                            <div>
+                                <div class="form-label mt-2" title="The value that this action will add to
+a part, either positive or negative.">Value <b class="info">?</b></div>
+                                <input disabled type="number" step="1" class="form-control" id="actions_input_value"
+                                    placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <div class="form-label mt-3" title="Used as the display name for the next calculation">Name
+                    <b class="info">?</b>
+                </div>
+                <input type="text" class="form-control" id="calc_input_name" placeholder="Item">
+            </div>
+            <div>
+                <div class="form-label mt-2" title="The target value shown after selecting an item
+to be forged, typically a red arrow, where the
+related resource pack helps count this number.
+This value is often random, hence no default.">Target Value <b class="info">?</b></div>
+                <input type="number" min="1" step="1" class="form-control" id="calc_input_target" placeholder="0">
+            </div>
+            <div>
+                <div class="form-label mt-2" title="The last actions that need to be taken on an item.">Last Actions
+                    <b class="info">?</b>
+                </div>
+                <div>
+                    <div class="overflow-auto" style="height: 8rem;">
+                        <p id="info_nas" class="text-body-tertiary">No Actions Set</p>
+                        <ul id="ul_last_actions" class="list-group list-group-numbered list-group-flush">
+                        </ul>
+                    </div>
+                    <div class="form-label">
+                        <span>Total:</span>
+                        <strong><span id="last_text_total">0</span></strong>
+                    </div>
+                    <button disabled id="btn_clear_last" class="btn btn-danger">Clear Last Actions</button>
+                    <button id="btn_use_last" class="btn btn-outline-info" title="When not using the resource pack method, click
+this after lining up the red and green arrow,
+as to use the sum of actions as the target.">Use total as target <b class="info">?</b></button>
+                </div>
+                <div class="form-label mt-2" title="Add the last actions that need to be taken on
+an item.">Add Last Actions <b class="info">?</b></div>
+                <div class="container">
+                    <div class="btn-matrix">
+                        <button id="generic_hit" class="btn btn-outline-info" title="Will consider any action that contains
+the word 'Hit', as is typical with recipes.
+Actions that fit this are colored the same.">Hit <b class="info">?</b></button>
+                    </div>
+                </div>
+                <div id="action_buttons" class="container">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <div class="btn-group mt-3">
+                    <button id="btn_calculate" class="btn btn-success" style="padding-inline: 5rem;">Calculate</button>
+                    <button id="btn_clipboard" class="btn btn-outline-secondary" title="Copy to Clipboard"
+                        data-bs-toggle="_tooltip" data-bs-placement="auto" data-bs-title="Copy to Clipboard">📋</button>
+                </div>
+            </div>
+            <div>
+                <select name="actions" id="result_select" size="2" class="form-select mt-2">
+                    <optgroup id="result_group" label="No Result">
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

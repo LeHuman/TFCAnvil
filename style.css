@@ -1,0 +1,51 @@
+.btn-matrix {
+    flex-wrap: wrap;
+}
+
+.btn-matrix>.btn {
+    width: 50%;
+    overflow: hidden;
+}
+
+.btn-matrix>.btn:nth-child(2n+3) {
+    margin-left: 0;
+}
+
+.btn-matrix>.btn:nth-child(n+3) {
+    margin-top: -1px;
+}
+
+.btn-matrix>.btn:first-child {
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+}
+
+.btn-matrix>.btn:nth-child(2) {
+    border-top-right-radius: 4px !important;
+}
+
+.btn-matrix>.btn:nth-last-child(2) {
+    border-bottom-left-radius: 4px !important;
+}
+
+.btn-matrix>.btn:last-child {
+    border-top-right-radius: 0;
+}
+
+.last_action {
+    margin: 0;
+    padding: .5rem;
+    max-width: 18rem;
+    overflow: hidden;
+}
+
+/* Decorations */
+.btn-matrix {
+    margin: 0.25rem;
+    max-width: 18rem;
+}
+
+.info {
+    font-size: 0.9rem !important;
+    font-weight: bolder !important;
+}

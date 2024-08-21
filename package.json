@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "javascript-lp-solver": "^0.4.24",
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    }
+}
