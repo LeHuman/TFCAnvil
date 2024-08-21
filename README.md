@@ -23,7 +23,7 @@ I have been sick and playing modded Minecraft. Felt like making a calculator, ma
 
 ## Usage
 
-<!-- The static site is hosted at TODO, use any modern browser to access it -->
+The static site is hosted at [lehuman.github.io/TFCAnvil](https://lehuman.github.io/TFCAnvil/), use any modern browser to access it.
 
 ### Requirements
 
